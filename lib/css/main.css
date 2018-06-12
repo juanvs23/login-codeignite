@@ -1,0 +1,30 @@
+/*generales*/
+body{
+	margin: 0;
+	padding:0;
+	font-size: 16px;
+	overflow-x:hidden;
+	font-family: 'open sans';
+
+}
+section{
+	width: 100% !important;
+	height: 100vh !important;
+	display: block;
+	z-index: -50;
+	padding-top: 30vh;
+}
+a{
+	text-decoration: none;
+	
+}
+
+/*sections*/
+#title{
+	font-family: 'Saira Extra Condensed';
+	color: rgba(0, 0, 255, 1);
+	font-size: 3rem;
+}
+.card-title h2{
+	text-align: center;
+}
