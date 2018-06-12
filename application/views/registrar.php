@@ -8,10 +8,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="row">
 				<div class="col-md-4 offset-4 card">
 					<div class="card-title">
-						<h2>login</h2>
+						<h2>Registro</h2>
 					</div>
 					<div class="card-info ">
-						<form action="<?php echo base_url('index.php/Welcome/revisar/') ?>" method="get" >
+						<form action="">
 							<div class="form-group form-row">
 								<label class="col-12" for="">correo Electronico</label>
 							 	<input class="col-12" type="text" name="email" value="" placeholder="Email">
@@ -34,11 +34,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						</form>
 					</div>
 					<div class="card-footer">
-						<a href="<?php echo base_url('/Welcome/registrar') ?>">registrar</a>
+						<a href="<?php echo base_url('lib/css/bootstrap.css') ?>">registrar</a>
 					</div>
 				</div>
 			</div>
 		</article>
 	</section>
-
-
