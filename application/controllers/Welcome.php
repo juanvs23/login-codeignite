@@ -19,35 +19,31 @@ class Welcome extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 	
-	
+	public $email;
+	public $pass;
+	public $correcto;
 	
 	public function __construct()
 	{
 		parent::__construct();
-		
+		$this->load->library('form_validation');
 		$this->load->helper('url');
 		$this->load->view('layout/head');
-		/* $email=  $this->input->post('email'); 
-        $pass= $this->input->post('pass');*/
+		 $email = $this->input->get('email');
+    $pass = $this->input->get('pass');
+		$correcto = array( 'correcto'=>'<h3 class=" text-center text-success ">Hola juan</h3>','email'=> $email,
+    		'pass'=>$pass);
+		
 
 	}
 
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$correcto['correcto']='';
+		$this->load->view('welcome_message',$correcto);
 		$this->load->view('layout/footer');
 	}
-	/*public function revisar($mail, $pass)
-	{   
-		if ($mail == 'juanvs23@gmal.com' and $pass =='juan123!') {
-			$this->load->view('registrar');
-			
-		}else {
-			
-		$this->load->view('registrar');
-		}
-		$this->load->view('layout/footer');
-	}*/
+	
 	public function registrar()
 	{
 		$this->load->view('registrar');
@@ -56,23 +52,33 @@ class Welcome extends CI_Controller {
 	public function revisar() {
     $email = $this->input->get('email');
     $pass = $this->input->get('pass');
+    $this->form_validation->set_rules('email', 'Email', 'trim|required|min_length[5]|max_length[12]');
+ 
+ if ($this->form_validation->run()==false) {
 
+ 		$correcto['correcto'] = "<h3>Falta correo</h3>";
+
+    	$this->load->view('welcome_message', $correcto);
+ 	
+ }else {
+ 	
 
     if ($email=='juanvs23@gmail.com' and  $pass=='juan123!') {
     	
-    	echo "hola tu correo es: " . $email;
+    	
+    		$correcto['correcto'] = "<h3>Hola  juan</h3>";
+
+    	$this->load->view('welcome_message', $correcto);
 
     }else {
-    	echo 'no eres juan';
+    	
+    		$correcto['correcto'] = "<h3> Tu no eres Juan</h3>";
+
+    	$this->load->view('welcome_message', $correcto);
     }
+ }
     
 
     
-      /*  echo $this->input->post('email'); 
-        echo $this->input->post('pass');*/
-
-        
-
-    /*$this->load->view('hey',$email, $pass);*/
 }
 }

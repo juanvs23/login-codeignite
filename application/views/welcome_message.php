@@ -34,6 +34,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						</form>
 					</div>
 					<div class="card-footer">
+						<?php  echo $correcto; ?>
 						<a href="<?php echo base_url('/Welcome/registrar') ?>">registrar</a>
 					</div>
 				</div>
