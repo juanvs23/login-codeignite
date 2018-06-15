@@ -18,6 +18,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<link rel="stylesheet" href="<?php echo base_url('lib/fonts/open_sans/open-sans.css')  ?>">
 	<link rel="stylesheet" href="<?php echo base_url('lib/fonts/saira/Saira-extra-condesad.css')  ?>">
 
+	<!--angular-->
+	<script src=" <?php echo base_url('lib/js/bootstrap/jquery-3.3.1.js')  ?> "></script>
+	<script src=" <?php echo base_url('lib/js/angular-1.7.0/angular.js')  ?> "></script>
+
 	
 
 

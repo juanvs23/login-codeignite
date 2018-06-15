@@ -26,12 +26,11 @@ class Welcome extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->library('form_validation');
-		$this->load->helper('url');
+		
 		$this->load->view('layout/head');
-		 $email = $this->input->get('email');
-    $pass = $this->input->get('pass');
-		$correcto = array( 'correcto'=>'<h3 class=" text-center text-success ">Hola juan</h3>','email'=> $email,
+		 $email = $this->input->post('email');
+    $pass = $this->input->post('pass');
+		$correcto = array( 'correcto'=>'<h3 class=" text-center text-success ">Hola juan</h3>','emailfalta'=> '',
     		'pass'=>$pass);
 		
 
@@ -43,42 +42,39 @@ class Welcome extends CI_Controller {
 		$this->load->view('welcome_message',$correcto);
 		$this->load->view('layout/footer');
 	}
-	
+	public function testing(){
+		echo $email = $this->input->post('email');
+		echo $email = $this->input->post('pass');
+	}
 	public function registrar()
 	{
 		$this->load->view('registrar');
 		$this->load->view('layout/footer');
 	}
 	public function revisar() {
-    $email = $this->input->get('email');
-    $pass = $this->input->get('pass');
-    $this->form_validation->set_rules('email', 'Email', 'trim|required|min_length[5]|max_length[12]');
- 
- if ($this->form_validation->run()==false) {
-
- 		$correcto['correcto'] = "<h3>Falta correo</h3>";
-
-    	$this->load->view('welcome_message', $correcto);
+    $email = $this->input->post('email');
+    $pass = $this->input->post('pass');
+   
  	
- }else {
- 	
-
+    	
     if ($email=='juanvs23@gmail.com' and  $pass=='juan123!') {
     	
     	
     		$correcto['correcto'] = "<h3>Hola  juan</h3>";
 
     	$this->load->view('welcome_message', $correcto);
+    	$this->load->view('layout/footer');
 
     }else {
     	
     		$correcto['correcto'] = "<h3> Tu no eres Juan</h3>";
 
     	$this->load->view('welcome_message', $correcto);
+    	$this->load->view('layout/footer');
     }
  }
     
 
     
-}
+
 }

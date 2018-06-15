@@ -5,6 +5,10 @@ body{
 	font-size: 16px;
 	overflow-x:hidden;
 	font-family: 'open sans';
+	background-image: url('../img/2.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+
 
 }
 section{
@@ -22,9 +26,18 @@ a{
 /*sections*/
 #title{
 	font-family: 'Saira Extra Condensed';
-	color: rgba(0, 0, 255, 1);
+	color: rgba(255, 255, 255, 1);
 	font-size: 3rem;
+	text-shadow: 2px 2px 2px black;
 }
 .card-title h2{
 	text-align: center;
 }
+.card{
+	background-image: url('../img/homepage-img-overlay.jpg');
+	color: white;
+	opacity: 0.8;
+	box-shadow: 2px 3px 5px black;
+	animation-delay: 2.3s;
+}
+input{background-color: transparent;color:white; border-radius: 5px;}

@@ -37,6 +37,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<a href="<?php echo base_url('lib/css/bootstrap.css') ?>">registrar</a>
 					</div>
 				</div>
+				
 			</div>
 		</article>
 	</section>
