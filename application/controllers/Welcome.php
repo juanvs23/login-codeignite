@@ -57,7 +57,7 @@ class Welcome extends CI_Controller {
    
  	
     	
-    if ($email=='juanvs23@gmail.com' and  $pass=='juan123!') {
+    if ($email=='fake@gmail.com' and  $pass=='fake123!') {
     	
     	
     		$correcto['correcto'] = "<h3>Hola  juan</h3>";

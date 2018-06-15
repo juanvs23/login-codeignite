@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <body>
 	<section id="login">
-		<h1 id="title" class="text-capitalize text-center animated bounceInDown" style="animation-delay: 1.3s;">Prueba de Bootstrap con codeigniter</h1>
+		<h1 id="title" class="text-capitalize text-center animated bounceInDown" style="animation-delay: 1.3s;">Login con Bootstrap, animate.css<br/> AngularJS  y codeigniter</h1>
 		<article class="container">	
 			<div class="row">
 				<div class="col-md-4 offset-4 ">

@@ -6,7 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
 	<!-- meta -->
 	<meta charset="utf-8">
-	<title>Welcome to CodeIgniter</title>
+	<title>Login de prueba con AngularJS y Codeigniter</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<!-- style -->
 	<link rel="stylesheet" href="<?php echo base_url('lib/css/bootstrap.css')  ?>">
